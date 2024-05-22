@@ -1,7 +1,11 @@
 package com.ruchika.hangman.responses;
 
 import com.ruchika.hangman.model.User;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class ResetPasswordResponse {
 
     private User user;

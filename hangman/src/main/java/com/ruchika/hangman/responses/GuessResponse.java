@@ -1,7 +1,11 @@
 package com.ruchika.hangman.responses;
 
 import com.ruchika.hangman.model.Game;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class GuessResponse {
 
     private Game game;

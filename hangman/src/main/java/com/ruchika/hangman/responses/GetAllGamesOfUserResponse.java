@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ruchika.hangman.model.Game;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class GetAllGamesOfUserResponse {
     
     private List<Game> gamesWithoutWord;

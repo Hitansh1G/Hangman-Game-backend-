@@ -3,7 +3,11 @@ package com.ruchika.hangman.responses;
 import java.util.List;
 
 import com.ruchika.hangman.model.GameStatus;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class SaveGuessByUserResponse {
 
     private String wordState;

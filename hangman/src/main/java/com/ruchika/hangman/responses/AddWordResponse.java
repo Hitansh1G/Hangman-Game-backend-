@@ -1,7 +1,11 @@
 package com.ruchika.hangman.responses;
 
 import com.ruchika.hangman.model.Word;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class AddWordResponse {
 
     private Word word;

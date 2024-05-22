@@ -1,6 +1,10 @@
 package com.ruchika.hangman.responses;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class DeleteWordResponse {
 
     private String deletedWordId;

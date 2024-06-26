@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the entire current directory contents into the container at /app
 COPY . .
 
+# Verify the contents of /app directory
+RUN ls -l
+
 # Build your application with Maven
 RUN mvn clean package
 

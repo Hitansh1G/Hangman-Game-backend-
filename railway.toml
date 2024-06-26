@@ -1,0 +1,6 @@
+[build]
+builder = "Nixpacks"
+buildCommand = "mvn clean package"
+
+[deploy]
+startCommand = "java -jar target/hangman-0.0.1-SNAPSHOT.jar"

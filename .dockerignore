@@ -1,0 +1,5 @@
+# Ignore everything
+*
+# Except target directory and necessary files
+!target/
+!target/hangman-0.0.1-SNAPSHOT.jar

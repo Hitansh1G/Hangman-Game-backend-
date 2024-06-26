@@ -13,8 +13,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class WordService implements IWordService {
 
-    @Autowired
-    private IWordRepository wordRepository;
+    private final IWordRepository wordRepository;
+
+    public WordService(IWordRepository wordRepository) {
+        this.wordRepository = wordRepository;
+    }
 
     @Override
     public List<Word> getAllWords() {
@@ -32,7 +35,7 @@ public class WordService implements IWordService {
         else if(addWordRequest.getHint().length()<5){
             throw new InvalidInputException("Hint should be atleast 5 characters long.");
         }
-        else if(addWordRequest.getWord().matches("^[a-zA-Z ]+$")==false){
+        else if(!addWordRequest.getWord().matches("^[a-zA-Z ]+$")){
             throw new InvalidInputException("Invalid word. Please provide a valid word containing only alphabets and spaces.");
         }
         else if(wordRepository.checkIfWordExists(addWordRequest.getWord())) {
@@ -49,7 +52,7 @@ public class WordService implements IWordService {
         if(wordId.isEmpty()){
             throw new InvalidInputException("Invalid input. Please provide a valid word id.");
         }
-        else if(wordRepository.checkIfWordIdExists(wordId)==false){
+        else if(!wordRepository.checkIfWordIdExists(wordId)){
             throw new InvalidInputException("Invalid word id. Please provide a valid word id.");
         }
         wordRepository.deleteWord(wordId);

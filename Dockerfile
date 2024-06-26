@@ -1,7 +1,7 @@
-# Use a base image that includes JDK and Maven
+# Use the Maven image with OpenJDK 17
 FROM maven:3.8.4-openjdk-17-slim
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
 # Copy the entire current directory contents into the container at /app

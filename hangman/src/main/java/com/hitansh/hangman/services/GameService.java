@@ -91,6 +91,7 @@ public class GameService implements IGameService {
                 remainingLives--;
                 score -= 10;
             }
+
             if (wordState.equals(game.getWord().getWord())) {
                 gameStatus = GameStatus.WON;
             } else if (remainingLives == 0) {
